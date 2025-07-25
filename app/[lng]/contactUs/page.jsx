@@ -8,7 +8,8 @@ import Line from "@/public/Line.png";
 import Chat from "@/public/Chat.png";
 import { useEffect, useState } from "react";
 
-export default function ContactUsPage({ lng }) {
+export default function ContactUsPage({ params }) {
+  const { lng } = params;
   const { t, i18n } = useTranslation(lng, "contactUs");
   const [ready, setReady] = useState(false);
 

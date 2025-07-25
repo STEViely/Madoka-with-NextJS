@@ -1,6 +1,5 @@
 "use client";
 
-import { use } from "react"; // 👈 ใช้ use() เพื่อแกะ Promise
 import { useTranslation } from "../i18n/client";
 import Button from "./_components/button";
 import { useEffect, useState } from "react";
@@ -16,12 +15,15 @@ import Link from "next/link";
 import FloatingContact from "./_components/FloatingContact";
 
 export default function HomePage({ params }) {
-  const { lng } = use(params); // 👈 ดึงค่า lng อย่างถูกต้อง
+  // ตรงนี้เอา params มาใช้ตรงๆเลย ไม่ต้องใช้ use()
+  const { lng } = params;
 
+  // ใช้ useTranslation กับภาษาที่ได้มา
   const { t, i18n } = useTranslation(lng, "home");
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    // เปลี่ยนภาษา ถ้าไม่ตรงกับ lng ที่รับมา
     if (i18n.language !== lng) {
       i18n.changeLanguage(lng).then(() => setReady(true));
     } else {
@@ -29,18 +31,19 @@ export default function HomePage({ params }) {
     }
   }, [i18n, lng]);
 
+  // รอจนกว่าจะพร้อมค่อยแสดงผล
   if (!ready) return null;
 
   return (
     <div>
       <Hero />
       <div className="w-full flex justify-center items-center">
-        <div className=" grid grid-cols-1 p-6 gap-6">
+        <div className="grid grid-cols-1 p-6 gap-6">
           <Button href={"/contactUs"} name={t("buttonContactUs")} />
-
           <Button href={"/ourStory"} name={t("buttonOurStory")} />
         </div>
       </div>
+
       <div className="w-[80%] mx-auto">
         <Image
           src={ourStory}
@@ -50,14 +53,17 @@ export default function HomePage({ params }) {
           className="rounded-2xl"
         />
       </div>
+
       <div className="w-[80%] mx-auto py-4">
         <p className="text-[12px] text-[#1A2A40]">{t("paragraph1")}</p>
       </div>
+
       <div className="w-[80%] mx-auto py-4">
         <h1>{t("ourStoryTitle")}</h1>
         <p className="text-[12px] text-[#1A2A40]">{t("paragraphDes")}</p>
       </div>
-      <div className="w-[80%] mx-auto py-4  grid grid-cols-1 gap-8">
+
+      <div className="w-[80%] mx-auto py-4 grid grid-cols-1 gap-8">
         <div className="flex gap-2">
           <Image src={preservative} alt="preservative" width={50} height={75} />
           <div>
@@ -69,6 +75,7 @@ export default function HomePage({ params }) {
             </p>
           </div>
         </div>
+
         <div className="flex gap-2">
           <Image src={alcohol} alt="alcohol" width={50} height={75} />
           <div>
@@ -76,6 +83,7 @@ export default function HomePage({ params }) {
             <p className="text-[12px] text-[#1A2A40]">{t("NoAlcoholDes")}</p>
           </div>
         </div>
+
         <div className="flex gap-2">
           <Image src={droplet} alt="droplet" width={50} height={75} />
           <div>
@@ -83,6 +91,7 @@ export default function HomePage({ params }) {
             <p className="text-[12px] text-[#1A2A40]">{t("NoMoreTearsDes")}</p>
           </div>
         </div>
+
         <Link
           href={"/ourStory"}
           className="flex items-center gap-2 text-[#1A2A40] text-[14px] font-bold"
@@ -91,6 +100,7 @@ export default function HomePage({ params }) {
           <Image src={arrow} alt="arrow" width={22} height={26} />
         </Link>
       </div>
+
       <Review title={t("ourReviews")} />
       <FloatingContact />
     </div>

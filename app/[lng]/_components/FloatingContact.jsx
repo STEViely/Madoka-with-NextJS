@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Line from "@/public/Line.png";
-import Chat from "@/public/chat.png";
+import Chat from "@/public/Chat.png";
 
 export default function FloatingContact() {
   return (
