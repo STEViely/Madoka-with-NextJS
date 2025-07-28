@@ -35,7 +35,7 @@ export default function HomePage({ params }) {
   if (!ready) return null;
 
   return (
-    <div>
+    <div className="] lg:mx-[200px]">
       <Hero />
       <div className="w-full flex justify-center items-center">
         <div className="grid grid-cols-1 p-6 gap-6">
@@ -55,22 +55,28 @@ export default function HomePage({ params }) {
       </div>
 
       <div className="w-[80%] mx-auto py-4">
-        <p className="text-[12px] text-[#1A2A40]">{t("paragraph1")}</p>
+        <p className="text-[12px] md:text-[14px] lg:text-[20px] text-[#1A2A40]">
+          {t("paragraph1")}
+        </p>
       </div>
 
       <div className="w-[80%] mx-auto py-4">
-        <h1>{t("ourStoryTitle")}</h1>
-        <p className="text-[12px] text-[#1A2A40]">{t("paragraphDes")}</p>
+        <h1 className="md:text-[18px] lg:text-[24px] font-bold">
+          {t("ourStoryTitle")}
+        </h1>
+        <p className="text-[12px] lg:text-[20px] md:text-[14px] text-[#1A2A40]">
+          {t("paragraphDes")}
+        </p>
       </div>
 
       <div className="w-[80%] mx-auto py-4 grid grid-cols-1 gap-8">
         <div className="flex gap-2">
           <Image src={preservative} alt="preservative" width={50} height={75} />
           <div>
-            <h4 className="text-[14px] text-[#1A2A40]">
+            <h4 className="text-[14px] lg:text-[20px] md:text-[16px] font-bold text-[#1A2A40]">
               {t("NoPreservatives")}
             </h4>
-            <p className="text-[12px] text-[#1A2A40]">
+            <p className="text-[12px] md:text-[14px] lg:text-[20px] text-[#1A2A40]">
               {t("NoPreservativesDes")}
             </p>
           </div>
@@ -79,22 +85,30 @@ export default function HomePage({ params }) {
         <div className="flex gap-2">
           <Image src={alcohol} alt="alcohol" width={50} height={75} />
           <div>
-            <h4 className="text-[14px] text-[#1A2A40]">{t("NoAlcohol")}</h4>
-            <p className="text-[12px] text-[#1A2A40]">{t("NoAlcoholDes")}</p>
+            <h4 className="text-[14px] md:text-[16px] lg:text-[20px] font-bold text-[#1A2A40]">
+              {t("NoAlcohol")}
+            </h4>
+            <p className="text-[12px] md:text-[14px] lg:text-[20px] text-[#1A2A40]">
+              {t("NoAlcoholDes")}
+            </p>
           </div>
         </div>
 
         <div className="flex gap-2">
           <Image src={droplet} alt="droplet" width={50} height={75} />
           <div>
-            <h4 className="text-[14px] text-[#1A2A40]">{t("NoMoreTears")}</h4>
-            <p className="text-[12px] text-[#1A2A40]">{t("NoMoreTearsDes")}</p>
+            <h4 className="text-[14px] md:text-[16px] lg:text-[20px] font-bold text-[#1A2A40]">
+              {t("NoMoreTears")}
+            </h4>
+            <p className="text-[12px] md:text-[14px] lg:text-[20px] text-[#1A2A40]">
+              {t("NoMoreTearsDes")}
+            </p>
           </div>
         </div>
 
         <Link
           href={"/ourStory"}
-          className="flex items-center gap-2 text-[#1A2A40] text-[14px] font-bold"
+          className="flex items-center gap-2 text-[#1A2A40] text-[14px] md:text-[16px] lg:text-[20px] font-bold"
         >
           OUR STORY
           <Image src={arrow} alt="arrow" width={22} height={26} />

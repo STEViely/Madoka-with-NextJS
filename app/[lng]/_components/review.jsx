@@ -62,7 +62,7 @@ export default function Review({ title }) {
 
   return (
     <div className="w-full flex flex-col items-center py-8 overflow-hidden">
-      <h1 className="my-4 text-[20px] font-bold">{title}</h1>
+      <h1 className="my-4 text-[20px] lg:text-[28px] font-bold">{title}</h1>
       <div
         className="bg-[#7492AA] w-full overflow-hidden py-4"
         ref={containerRef}
@@ -82,7 +82,7 @@ export default function Review({ title }) {
                 alt="reviewPicSample"
                 width={140}
                 height={140}
-                className="rounded-2xl"
+                className="rounded-2xl lg:w-[300px] lg:h-[220px] "
               />
               <div className="flex justify-between">
                 {Array.from({ length: review.stars }).map((_, i) => (

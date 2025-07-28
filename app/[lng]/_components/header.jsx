@@ -49,13 +49,19 @@ export default function Header({ lng }) {
       <nav className="w-full flex justify-between items-center px-4 sm:px-8 py-4 sm:py-6 bg-[#ffffff]">
         <Link href={`/${lng}`}>
           <div className="w-[96px] md:w-[120px] lg:w-[193px]">
-            <Image src={logo} alt="Madoka" width={96} height={96} />
+            <Image
+              src={logo}
+              alt="Madoka"
+              width={96}
+              height={96}
+              className="lg:w-[180px]"
+            />
           </div>
         </Link>
-        <div className="flex items-center gap-4 lg:gap-8">
+        <div className="flex items-center gap-4 lg:gap-16">
           <Link
             href={newPath}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-[#D66C5E] text-white px-4 py-2 rounded hover:bg-blue-700"
           >
             {t("switchTo")} {otherLang.toUpperCase()}
           </Link>
@@ -97,7 +103,7 @@ export default function Header({ lng }) {
             </button>
           </div>
 
-          <ul className="hidden lg:flex flex-row gap-4 text-white text-[16px] sm:text-[20px] md:text-[24px] z-10">
+          <ul className="hidden lg:flex flex-row gap-16 text-[#1A2A40] text-[16px] sm:text-[20px] md:text-[24px] z-10">
             <li
               className={`hover:underline ${
                 isActive(`/${lng}`) ? "underline" : ""
@@ -126,8 +132,8 @@ export default function Header({ lng }) {
       {isMenuOpen && (
         <>
           <div className="fixed right-0 top-14 bg-white opacity-50 w-full h-full z-40"></div>
-          <div className="absolute right-0 top-14 bg-[#00133B] w-[70%] flex flex-col items-end px-4 py-6 z-50">
-            <ul className="flex flex-col gap-4 text-white text-[16px] sm:text-[20px]">
+          <div className="absolute right-0 top-14 bg-[#7492AA] w-[40%] flex rounded-lg flex-col items-end px-4 py-6 z-50">
+            <ul className="flex flex-col gap-4 justify-center items-end text-white text-[16px] sm:text-[20px]">
               <li>
                 <Link
                   href={`/${lng}`}

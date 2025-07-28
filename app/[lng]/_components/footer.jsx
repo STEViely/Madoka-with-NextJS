@@ -1,10 +1,17 @@
 import Image from "next/image";
 import Line from "@/public/Line.png";
 import facebookIcon from "@/public/facebookIcon.png";
-
+import fullLogo from "@/public/fullLogo.png";
 export default function Footer() {
   return (
-    <footer className="bg-white  text-[#1A2A40] pt-4">
+    <footer className="bg-white  text-[#1A2A40] ">
+      <Image
+        src={fullLogo}
+        alt="logo"
+        width={50}
+        height={50}
+        className="mx-auto pb-4"
+      />
       <div className="container mx-auto text-center">
         <p className="text-sm">© 2025 Madoka. All rights reserved.</p>
         <p className="text-xs mt-2">Follow us on social media!</p>

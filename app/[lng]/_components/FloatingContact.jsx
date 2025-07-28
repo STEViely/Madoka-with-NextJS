@@ -4,7 +4,7 @@ import Chat from "@/public/Chat.png";
 
 export default function FloatingContact() {
   return (
-    <div className=" flex  fixed bottom-5 right-1 md:right-3 flex-col gap-2 z-50">
+    <div className=" flex  fixed bottom-5 right-1 md:right-3 flex-col justify-center items-center gap-2 z-50">
       <a
         href="https://lin.ee/MsoarOB"
         target="_blank"
@@ -16,7 +16,7 @@ export default function FloatingContact() {
             alt="line"
             width={80}
             height={80}
-            className="w-[46px] transition-transform duration-300 ease-in-out transform hover:scale-125 md:w-[62px]"
+            className="w-[42px] transition-transform duration-300 ease-in-out transform hover:scale-125 md:w-[62px]"
           />
         </button>
       </a>

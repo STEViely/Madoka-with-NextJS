@@ -6,6 +6,7 @@ import { useTranslation } from "../../i18n/client";
 import bottleSpray from "@/public/bottleSpray.jpg";
 import ourStoryending from "@/public/ourStoryending.jpg";
 import { useEffect, useState } from "react";
+import FloatingContact from "../_components/FloatingContact";
 
 export default function OurStoryPage({ params }) {
   const { lng } = params;
@@ -26,7 +27,7 @@ export default function OurStoryPage({ params }) {
   }
 
   return (
-    <div className="w-full">
+    <div className=" lg:mx-[200px]">
       <Image
         src={ourStoryHero}
         alt="background"
@@ -36,12 +37,14 @@ export default function OurStoryPage({ params }) {
         className="object-contain z-10 w-full h-auto"
       />
       <div className="px-8 py-4">
-        <h1 className="font-bold text-2xl my-4">{t("ourStory")}</h1>
-        <p>{t("paragraph1")}</p>
+        <h1 className="font-bold text-[18px] md:text-[24px] my-4">
+          {t("ourStory")}
+        </h1>
+        <p className="text-[14px] md:text-[16px]">{t("paragraph1")}</p>
 
-        <div className="mt-4 flex flex-col-reverse md:flex-row items-start gap-4">
-          <div className="w-full md:w-[40%] text-[16px] text-[#1A2A40]">
-            <p>{t("paragraph2")}</p>
+        <div className="mt-4 flex flex-col-reverse  md:flex-row items-start gap-4">
+          <div className="w-full md:w-[40%] text-[16px] text-[#1A2A40] ">
+            <p className="text-[14px] md:text-[16px] ">{t("paragraph2")}</p>
           </div>
 
           <div className="w-full md:w-[60%]">
@@ -64,6 +67,7 @@ export default function OurStoryPage({ params }) {
           />
         </div>
       </div>
+      <FloatingContact />
     </div>
   );
 }

@@ -24,17 +24,17 @@ export default function ContactUsPage({ params }) {
   if (!ready) return null;
 
   return (
-    <div className="mx-8 mt-4">
+    <div className="mx-8 mt-4 ">
       <div>
-        <h1 className="text-[42px]">{t("contactUs")}</h1>
+        <h1 className="text-[42px] font-bold">{t("contactUs")}</h1>
       </div>
 
       <div className="mt-2">
-        <p>{t("Description")}</p>
+        <p className="text-[16px] md:text-[18px]">{t("Description")}</p>
       </div>
 
       <div className="mt-4">
-        <p>{t("contactHere")}</p>
+        <p className="text-[16px] md:text-[18px]">{t("contactHere")}</p>
       </div>
 
       <div className="mt-4 flex flex-col items-center gap-4">
@@ -42,7 +42,7 @@ export default function ContactUsPage({ params }) {
       </div>
 
       <div className="flex justify-center items-center mt-12 font-bold">
-        <p>สายด่วนโทร : 099-201 8623</p>
+        <p>{t("hotLine")} </p>
       </div>
 
       <div className="mt-4 flex flex-col items-center gap-2">
