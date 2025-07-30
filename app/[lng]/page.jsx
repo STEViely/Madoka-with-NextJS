@@ -38,13 +38,13 @@ export default function HomePage({ params }) {
   if (!ready) return null;
 
   return (
-    <div className="relative lg:mx-[200px]">
+    <div className="relative xl:mx-[200px] overflow-hidden">
       <FadeInSection delay={0.2}>
         <Hero />
       </FadeInSection>
 
       <div className="w-full flex justify-center items-center">
-        <div className="grid grid-cols-1 p-6 gap-6 lg:mt-8">
+        <div className="grid grid-cols-1 p-6 gap-6 xl:mt-8">
           <FadeInSection delay={0.2}>
             <Button href={"/contactUs"} name={t("buttonContactUs")} />{" "}
           </FadeInSection>
@@ -55,7 +55,7 @@ export default function HomePage({ params }) {
       </div>
 
       <FadeInSection delay={0.2}>
-        <div className="w-[80%] mx-auto lg:mt-8 drop-shadow-lg">
+        <div className="w-[80%] mx-auto xl:mt-8 drop-shadow-xl">
           <Image
             src={ourStory}
             alt="ourStory"
@@ -66,28 +66,28 @@ export default function HomePage({ params }) {
         </div>
       </FadeInSection>
       <FadeInSection delay={0.2}>
-        <div className="w-[80%] mx-auto py-4 lg:mt-8">
-          <p className="text-[16px] md:text-[16px] lg:text-[20px] text-[#1A2A40]">
+        <div className="w-[80%] mx-auto py-4 xl:mt-8">
+          <p className="text-[16px] md:text-[16px] xl:text-[20px] text-[#1A2A40]">
             {t("paragraph1")}
           </p>
         </div>
       </FadeInSection>
-      <div className="w-[80%] mx-auto py-4 lg:mt-8">
+      <div className="w-[80%] mx-auto py-4 xl:mt-8">
         <FadeInSection delay={0.2}>
-          <h1 className="text-[20px] lg:text-[24px] font-bold">
+          <h1 className="text-[20px] xl:text-[24px] font-bold">
             {t("ourStoryTitle")}
           </h1>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <p className="text-[16px] lg:text-[20px] md:text-[16px] text-[#1A2A40] lg:mt-8">
+          <p className="text-[16px] xl:text-[20px] md:text-[16px] text-[#1A2A40] xl:mt-8">
             {t("paragraphDes")}
           </p>
         </FadeInSection>
       </div>
 
-      <div className="w-[80%] mx-auto py-4 grid grid-cols-1 gap-8 lg:mt-8">
+      <div className="w-[80%] mx-auto py-4 grid grid-cols-1 gap-8 xl:mt-8">
         <FadeInSection delay={0.2}>
-          <div className="flex gap-2 lg:mt-8">
+          <div className="flex gap-2 xl:mt-8">
             <Image
               src={preservative}
               alt="preservative"
@@ -95,36 +95,36 @@ export default function HomePage({ params }) {
               height={75}
             />
             <div>
-              <h4 className="text-[16px] lg:text-[20px] md:text-[16px] font-bold text-[#1A2A40]">
+              <h4 className="text-[16px] xl:text-[20px] md:text-[16px] font-bold text-[#1A2A40]">
                 {t("NoPreservatives")}
               </h4>
-              <p className="text-[16px] md:text-[16px] lg:text-[20px] text-[#1A2A40]">
+              <p className="text-[16px] md:text-[16px] xl:text-[20px] text-[#1A2A40]">
                 {t("NoPreservativesDes")}
               </p>
             </div>
           </div>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <div className="flex gap-2 lg:mt-8">
+          <div className="flex gap-2 xl:mt-8">
             <Image src={alcohol} alt="alcohol" width={50} height={75} />
             <div>
-              <h4 className="text-[16px] md:text-[16px] lg:text-[20px] font-bold text-[#1A2A40]">
+              <h4 className="text-[16px] md:text-[16px] xl:text-[20px] font-bold text-[#1A2A40]">
                 {t("NoAlcohol")}
               </h4>
-              <p className="text-[16px] md:text-[16px] lg:text-[20px] text-[#1A2A40]">
+              <p className="text-[16px] md:text-[16px] xl:text-[20px] text-[#1A2A40]">
                 {t("NoAlcoholDes")}
               </p>
             </div>
           </div>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <div className="flex gap-2 lg:mt-8">
+          <div className="flex gap-2 xl:mt-8">
             <Image src={droplet} alt="droplet" width={50} height={75} />
             <div>
-              <h4 className="text-[16px] md:text-[16px] lg:text-[20px] font-bold text-[#1A2A40]">
+              <h4 className="text-[16px] md:text-[16px] xl:text-[20px] font-bold text-[#1A2A40]">
                 {t("NoMoreTears")}
               </h4>
-              <p className="text-[16px] md:text-[16px] lg:text-[20px] text-[#1A2A40]">
+              <p className="text-[16px] md:text-[16px] xl:text-[20px] text-[#1A2A40]">
                 {t("NoMoreTearsDes")}
               </p>
             </div>
@@ -133,7 +133,7 @@ export default function HomePage({ params }) {
         <FadeInSection delay={0.2}>
           <Link
             href={"/ourStory"}
-            className="flex items-center gap-2 text-[#1A2A40] text-[16px] md:text-[16px] lg:text-[20px] font-bold lg:mt-8"
+            className="flex items-center gap-2 text-[#1A2A40] text-[16px] md:text-[16px] xl:text-[20px] font-bold xl:mt-8"
           >
             OUR STORY
             <Image src={arrow} alt="arrow" width={22} height={26} />
@@ -144,19 +144,19 @@ export default function HomePage({ params }) {
       <Review title={t("ourReviews")} />
       <FadeInSection delay={0.2}>
         <div>
-          <div className="absolute top-[1450px] right-[-24%] rotate-[-23deg] md:top-[1520px] md:right-[-12%] lg:right-[-32%] lg:rotate-[-52deg] lg:top-[2000px]   z-[-1]">
+          <div className="absolute top-[1450px] right-[-24%] rotate-[-23deg] md:top-[1520px] md:right-[-12%] xl:right-[-32%] xl:rotate-[-52deg] xl:top-[2000px]   z-[-1]">
             <Image
               src={cartoonDog}
               alt="dog"
-              className="w-[260px] md:w-[360px] lg:w-[740px] drop-shadow-lg"
+              className="w-[260px] md:w-[360px] xl:w-[740px] drop-shadow-xl "
               style={{ height: "auto" }}
             />
           </div>
-          <div className=" absolute top-[1500px] left-[-25%] rotate-[23deg] md:top-[1650px] md:left-[-14%]  lg:left-[-35%] lg:rotate-[42deg] lg:top-[2200px]  z-[-1]">
+          <div className=" absolute top-[1500px] left-[-25%] rotate-[23deg] md:top-[1650px] md:left-[-14%]  xl:left-[-35%] xl:rotate-[42deg] xl:top-[2200px]  z-[-1]">
             <Image
               src={cartoonCat}
               alt="Cat"
-              className="w-[260px] md:w-[300px] lg:w-[740px] drop-shadow-lg"
+              className="w-[260px] md:w-[300px] xl:w-[740px] drop-shadow-xl "
               style={{ height: "auto" }}
             />
           </div>

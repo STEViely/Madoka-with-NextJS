@@ -30,27 +30,27 @@ export default function ContactUsPage({ params }) {
     <div className="relative overflow-hidden ">
       <div>
         <FadeInSection delay={0.2}>
-          <div className="absolute top-[670px] right-[-20%] rotate-[-23deg] md:top-[810px] md:right-[-8%] lg:right-[-8%] lg:rotate-[-32deg] lg:top-[880px]  z-[-1]">
+          <div className="absolute top-[670px] right-[-20%] rotate-[-23deg] md:top-[810px] md:right-[-8%] xl:right-[-8%] xl:rotate-[-32deg] xl:top-[880px]  z-[-1]">
             <Image
               src={cartoonDog}
               alt="dog"
-              className="w-[230px] md:w-[280px] lg:w-[540px]"
+              className="w-[230px] md:w-[280px] xl:w-[540px]"
               style={{ height: "auto" }}
             />
           </div>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <div className=" absolute top-[670px] left-[-25%] rotate-[23deg] md:top-[810px] md:left-[-10%] lg:left-[-14%] lg:rotate-[32deg] lg:top-[860px]  z-[-1]">
+          <div className=" absolute top-[670px] left-[-25%] rotate-[23deg] md:top-[810px] md:left-[-10%] xl:left-[-14%] xl:rotate-[32deg] xl:top-[860px]  z-[-1]">
             <Image
               src={cartoonCat}
               alt="Cat"
-              className="w-[260px] lg:w-[740px] "
+              className="w-[260px] xl:w-[740px] "
               style={{ height: "auto" }}
             />
           </div>
         </FadeInSection>
       </div>
-      <div className=" mx-8 mt-4 lg:mt-8 lg:mx-[200px]">
+      <div className=" mx-8 mt-4 xl:mt-8 xl:mx-[200px]">
         <FadeInSection delay={0.2}>
           <div>
             <h1 className="text-[42px] font-bold text-[#1A2A40]">
@@ -59,28 +59,28 @@ export default function ContactUsPage({ params }) {
           </div>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <div className="mt-4 lg:mt-8">
-            <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#1A2A40]">
+          <div className="mt-4 xl:mt-8">
+            <p className="text-[16px] md:text-[18px] xl:text-[24px] text-[#1A2A40]">
               {t("Description")}
             </p>
           </div>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <div className="mt-4 lg:mt-8">
-            <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#1A2A40]">
+          <div className="mt-4 xl:mt-8">
+            <p className="text-[16px] md:text-[18px] xl:text-[24px] text-[#1A2A40]">
               {t("contactHere")}
             </p>
           </div>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <div className="mt-4 lg:mt-8">
-            <h1 className="font-bold text-center text-[#0080FF] text-[16px] md:text-[18px] lg:text-[28px]">
+          <div className="mt-4 xl:mt-8">
+            <h1 className="font-bold text-center text-[#0080FF] text-[16px] md:text-[18px] xl:text-[28px]">
               Facebook Page :
             </h1>
           </div>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <div className="mt-4 lg:mt-8 flex flex-col items-center gap-4 cursor-pointer">
+          <div className="mt-4 xl:mt-8 flex flex-col items-center gap-4 cursor-pointer">
             <Link
               href={"https://www.facebook.com/profile.php?id=61576768495177#"}
               target="_blank"
@@ -90,27 +90,27 @@ export default function ContactUsPage({ params }) {
                 alt="Facebook Banner"
                 width={760}
                 style={{ height: "auto" }}
-                className="rounded-2xl lg:w-[1000px] "
+                className="rounded-2xl xl:w-[1000px] "
               />
             </Link>
           </div>
         </FadeInSection>
         <FadeInSection delay={0.2}>
           <div className="flex justify-center items-center mt-12 font-bold">
-            <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#1A2A40]">
+            <p className="text-[16px] md:text-[18px] xl:text-[24px] text-[#1A2A40]">
               {t("hotLine")}
             </p>
           </div>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <div className="mt-4 lg:mt-8 flex flex-col items-center gap-2">
-            <p className="font-bold text-[16px] md:text-[18px] lg:text-[24px] text-[#1A2A40]">
+          <div className="mt-4 xl:mt-8 flex flex-col items-center gap-2">
+            <p className="font-bold text-[16px] md:text-[18px] xl:text-[24px] text-[#1A2A40]">
               {t("or")}
             </p>
           </div>
         </FadeInSection>
 
-        <div className="flex justify-center items-center gap-8 lg:gap-16 mt-4 lg:mt-8 mb-8">
+        <div className="flex justify-center items-center gap-8 xl:gap-16 mt-4 xl:mt-8 mb-8">
           <FadeInSection delay={0.2}>
             <Link href="https://line.me/ti/p/KXQhqKU34N" target="_blank">
               <Image
