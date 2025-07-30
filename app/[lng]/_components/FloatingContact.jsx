@@ -4,7 +4,7 @@ import Chat from "@/public/Chat.png";
 
 export default function FloatingContact() {
   return (
-    <div className=" flex  fixed bottom-5 right-1 md:right-3 flex-col justify-center items-center gap-2 z-50">
+    <div className="flex fixed bottom-5 right-1 md:right-3 flex-col justify-center items-center gap-2 z-[9999] isolation-auto">
       <a
         href="https://lin.ee/MsoarOB"
         target="_blank"
@@ -38,3 +38,10 @@ export default function FloatingContact() {
     </div>
   );
 }
+// export default function FloatingContact() {
+//   return (
+//     <div className="fixed bottom-5 right-5 z-[9999] bg-red-500 text-white p-2">
+//       Floating Contact!
+//     </div>
+//   );
+// }

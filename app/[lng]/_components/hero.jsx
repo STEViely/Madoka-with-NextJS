@@ -3,14 +3,13 @@ import heroPic from "@/public/heroPic.jpg";
 
 export default function Hero() {
   return (
-    <div className="relative w-full ">
+    <div className="relative w-full drop-shadow-lg">
       <Image
         src={heroPic}
         alt="background"
         width={1920}
-        height={1080}
-        priority // for LCP optimization
-        className="object-contain z-10"
+        style={{ height: "auto" }}
+        priority
       />
     </div>
   );

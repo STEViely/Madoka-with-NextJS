@@ -7,6 +7,9 @@ import Link from "next/link";
 import Line from "@/public/Line.png";
 import Chat from "@/public/Chat.png";
 import { useEffect, useState } from "react";
+import cartoonDog from "@/public/cartoonDog.png";
+import cartoonCat from "@/public/cartoonCat.png";
+import FadeInSection from "../_components/fadeInSection";
 
 export default function ContactUsPage({ params }) {
   const { lng } = params;
@@ -24,42 +27,114 @@ export default function ContactUsPage({ params }) {
   if (!ready) return null;
 
   return (
-    <div className="mx-8 mt-4 ">
+    <div className="relative overflow-hidden ">
       <div>
-        <h1 className="text-[42px] font-bold">{t("contactUs")}</h1>
+        <FadeInSection delay={0.2}>
+          <div className="absolute top-[670px] right-[-20%] rotate-[-23deg] md:top-[810px] md:right-[-8%] lg:right-[-8%] lg:rotate-[-32deg] lg:top-[880px]  z-[-1]">
+            <Image
+              src={cartoonDog}
+              alt="dog"
+              className="w-[230px] md:w-[280px] lg:w-[540px]"
+              style={{ height: "auto" }}
+            />
+          </div>
+        </FadeInSection>
+        <FadeInSection delay={0.2}>
+          <div className=" absolute top-[670px] left-[-25%] rotate-[23deg] md:top-[810px] md:left-[-10%] lg:left-[-14%] lg:rotate-[32deg] lg:top-[860px]  z-[-1]">
+            <Image
+              src={cartoonCat}
+              alt="Cat"
+              className="w-[260px] lg:w-[740px] "
+              style={{ height: "auto" }}
+            />
+          </div>
+        </FadeInSection>
       </div>
+      <div className=" mx-8 mt-4 lg:mt-8 lg:mx-[200px]">
+        <FadeInSection delay={0.2}>
+          <div>
+            <h1 className="text-[42px] font-bold text-[#1A2A40]">
+              {t("contactUs")}
+            </h1>
+          </div>
+        </FadeInSection>
+        <FadeInSection delay={0.2}>
+          <div className="mt-4 lg:mt-8">
+            <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#1A2A40]">
+              {t("Description")}
+            </p>
+          </div>
+        </FadeInSection>
+        <FadeInSection delay={0.2}>
+          <div className="mt-4 lg:mt-8">
+            <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#1A2A40]">
+              {t("contactHere")}
+            </p>
+          </div>
+        </FadeInSection>
+        <FadeInSection delay={0.2}>
+          <div className="mt-4 lg:mt-8">
+            <h1 className="font-bold text-center text-[#0080FF] text-[16px] md:text-[18px] lg:text-[28px]">
+              Facebook Page :
+            </h1>
+          </div>
+        </FadeInSection>
+        <FadeInSection delay={0.2}>
+          <div className="mt-4 lg:mt-8 flex flex-col items-center gap-4 cursor-pointer">
+            <Link
+              href={"https://www.facebook.com/profile.php?id=61576768495177#"}
+              target="_blank"
+            >
+              <Image
+                src={facebookBanner}
+                alt="Facebook Banner"
+                width={760}
+                style={{ height: "auto" }}
+                className="rounded-2xl lg:w-[1000px] "
+              />
+            </Link>
+          </div>
+        </FadeInSection>
+        <FadeInSection delay={0.2}>
+          <div className="flex justify-center items-center mt-12 font-bold">
+            <p className="text-[16px] md:text-[18px] lg:text-[24px] text-[#1A2A40]">
+              {t("hotLine")}
+            </p>
+          </div>
+        </FadeInSection>
+        <FadeInSection delay={0.2}>
+          <div className="mt-4 lg:mt-8 flex flex-col items-center gap-2">
+            <p className="font-bold text-[16px] md:text-[18px] lg:text-[24px] text-[#1A2A40]">
+              {t("or")}
+            </p>
+          </div>
+        </FadeInSection>
 
-      <div className="mt-2">
-        <p className="text-[16px] md:text-[18px]">{t("Description")}</p>
-      </div>
-
-      <div className="mt-4">
-        <p className="text-[16px] md:text-[18px]">{t("contactHere")}</p>
-      </div>
-
-      <div className="mt-4 flex flex-col items-center gap-4">
-        <Image src={facebookBanner} alt="Facebook Banner" />
-      </div>
-
-      <div className="flex justify-center items-center mt-12 font-bold">
-        <p>{t("hotLine")} </p>
-      </div>
-
-      <div className="mt-4 flex flex-col items-center gap-2">
-        <p className="font-bold">{t("or")}</p>
-      </div>
-
-      <div className="flex justify-center items-center gap-8 mt-4 mb-8">
-        <Link href="https://line.me/ti/p/KXQhqKU34N" target="_blank">
-          <Image src={Line} alt="Line" />
-        </Link>
-
-        <Link
-          href="https://m.me/650965728100609?source=qr_link_share"
-          target="_blank"
-        >
-          <Image src={Chat} alt="Messenger Chat" />
-        </Link>
+        <div className="flex justify-center items-center gap-8 lg:gap-16 mt-4 lg:mt-8 mb-8">
+          <FadeInSection delay={0.2}>
+            <Link href="https://line.me/ti/p/KXQhqKU34N" target="_blank">
+              <Image
+                src={Line}
+                alt="Line"
+                width={60}
+                style={{ height: "auto" }}
+              />
+            </Link>
+          </FadeInSection>
+          <FadeInSection delay={0.2}>
+            <Link
+              href="https://m.me/650965728100609?source=qr_link_share"
+              target="_blank"
+            >
+              <Image
+                src={Chat}
+                alt="Messenger Chat"
+                width={58}
+                style={{ height: "auto" }}
+              />
+            </Link>
+          </FadeInSection>
+        </div>
       </div>
     </div>
   );

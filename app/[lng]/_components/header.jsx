@@ -46,22 +46,16 @@ export default function Header({ lng }) {
 
   return (
     <header>
-      <nav className="w-full flex justify-between items-center px-4 sm:px-8 py-4 sm:py-6 bg-[#ffffff]">
+      <nav className="w-full flex justify-between items-center px-4 sm:px-8 py-4 sm:py-6 bg-[#ffffff] drop-shadow-lg">
         <Link href={`/${lng}`}>
           <div className="w-[96px] md:w-[120px] lg:w-[193px]">
-            <Image
-              src={logo}
-              alt="Madoka"
-              width={96}
-              height={96}
-              className="lg:w-[180px]"
-            />
+            <Image src={logo} alt="Madoka" className="w-[96px] lg:w-[180px]" />
           </div>
         </Link>
         <div className="flex items-center gap-4 lg:gap-16">
           <Link
             href={newPath}
-            className="bg-[#D66C5E] text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-[#D66C5E] text-white px-4 py-2 rounded hover:bg-[#7492AA] drop-shadow-lg transition-all duration-100 ease-in-out"
           >
             {t("switchTo")} {otherLang.toUpperCase()}
           </Link>
@@ -107,21 +101,21 @@ export default function Header({ lng }) {
             <li
               className={`hover:underline ${
                 isActive(`/${lng}`) ? "underline" : ""
-              }`}
+              } drop-shadow-lg`}
             >
               <Link href={`/${lng}`}>{t("home")}</Link>
             </li>
             <li
               className={`hover:underline ${
                 isActive(`/${lng}/ourStory`) ? "underline" : ""
-              }`}
+              } drop-shadow-lg`}
             >
               <Link href={`/${lng}/ourStory`}>{t("ourStory")}</Link>
             </li>
             <li
               className={`hover:underline ${
                 isActive(`/${lng}/contactUs`) ? "underline" : ""
-              }`}
+              } drop-shadow-lg`}
             >
               <Link href={`/${lng}/contactUs`}>{t("contactUs")}</Link>
             </li>

@@ -64,7 +64,7 @@ export default function Review({ title }) {
     <div className="w-full flex flex-col items-center py-8 overflow-hidden">
       <h1 className="my-4 text-[20px] lg:text-[28px] font-bold">{title}</h1>
       <div
-        className="bg-[#7492AA] w-full overflow-hidden py-4"
+        className="bg-[#7492AA] w-full overflow-hidden py-4 lg:mt-8"
         ref={containerRef}
       >
         <motion.div
@@ -75,22 +75,28 @@ export default function Review({ title }) {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="flex-shrink-0 flex flex-col gap-2 w-[140px]"
+              className="flex-shrink-0 flex flex-col gap-2 w-[140px] lg:w-[220px] "
             >
               <Image
                 src={reviewPic}
                 alt="reviewPicSample"
-                width={140}
-                height={140}
-                className="rounded-2xl lg:w-[300px] lg:h-[220px] "
+                className="rounded-2xl w-[140px] h-[220px] lg:w-[220px] lg:h-[330px] "
               />
-              <div className="flex justify-between">
+              <div className="flex justify-start items-center ">
                 {Array.from({ length: review.stars }).map((_, i) => (
                   <div key={i}>⭐</div>
                 ))}
               </div>
-              <p className="text-[12px] text-white">{review.text}</p>
-              <h5 className="font-bold text-white">{review.name}</h5>
+              <div>
+                <p className="text-[12px] lg:text-[16px] text-white">
+                  {review.text}
+                </p>
+              </div>
+              <div>
+                <h5 className="font-bold lg:text-[16px] text-white">
+                  {review.name}
+                </h5>
+              </div>
             </div>
           ))}
         </motion.div>

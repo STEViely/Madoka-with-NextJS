@@ -2,8 +2,8 @@ import "./globals.css";
 import { Providers } from "../app/[lng]/_components/Providers";
 
 export const metadata = {
-  title: "Example i18n App",
-  description: "Example app with Next.js i18n",
+  title: "Madoka",
+  description: "Madoka, Dog and Cat Perfume",
 };
 
 export default function RootLayout({ children }) {
