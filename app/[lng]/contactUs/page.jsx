@@ -30,21 +30,21 @@ export default function ContactUsPage({ params }) {
     <div className="relative overflow-hidden ">
       <div>
         <FadeInSection delay={0.2}>
-          <div className="absolute top-[670px] right-[-20%] rotate-[-23deg] md:top-[810px] md:right-[-8%] xl:right-[-8%] xl:rotate-[-32deg] xl:top-[880px]  z-[-1]">
+          <div className="absolute top-[670px] right-[-20%] rotate-[-23deg] md:top-[810px] lg:top-[750px] lg:right-[-6%] md:right-[-8%] xl:right-[-8%] xl:rotate-[-32deg] xl:top-[880px]  z-[-1]">
             <Image
               src={cartoonDog}
               alt="dog"
-              className="w-[230px] md:w-[280px] xl:w-[540px]"
+              className="w-[220px] md:w-[280px] lg:w-[320px] xl:w-[540px]"
               style={{ height: "auto" }}
             />
           </div>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <div className=" absolute top-[670px] left-[-25%] rotate-[23deg] md:top-[810px] md:left-[-10%] xl:left-[-14%] xl:rotate-[32deg] xl:top-[860px]  z-[-1]">
+          <div className=" absolute top-[700px] left-[-20%] rotate-[23deg] md:top-[860px] md:left-[-8%] lg:top-[760px] xl:left-[-14%] xl:rotate-[32deg] xl:top-[860px]  z-[-1]">
             <Image
               src={cartoonCat}
               alt="Cat"
-              className="w-[260px] xl:w-[740px] "
+              className="w-[200px] lg:w-[400px] xl:w-[740px] "
               style={{ height: "auto" }}
             />
           </div>
@@ -53,7 +53,7 @@ export default function ContactUsPage({ params }) {
       <div className=" mx-8 mt-4 xl:mt-8 xl:mx-[200px]">
         <FadeInSection delay={0.2}>
           <div>
-            <h1 className="text-[42px] font-bold text-[#1A2A40]">
+            <h1 className="text-[42px] font-bold text-[#1A2A40] drop-shadow-lg ">
               {t("contactUs")}
             </h1>
           </div>

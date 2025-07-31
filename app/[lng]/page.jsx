@@ -38,7 +38,7 @@ export default function HomePage({ params }) {
   if (!ready) return null;
 
   return (
-    <div className="relative xl:mx-[200px] overflow-hidden">
+    <div className="relative xl:mx-[200px] max-w-screen overflow-x-hidden">
       <FadeInSection delay={0.2}>
         <Hero />
       </FadeInSection>
@@ -67,19 +67,19 @@ export default function HomePage({ params }) {
       </FadeInSection>
       <FadeInSection delay={0.2}>
         <div className="w-[80%] mx-auto py-4 xl:mt-8">
-          <p className="text-[16px] md:text-[16px] xl:text-[20px] text-[#1A2A40]">
+          <p className="text-[16px] md:text-[16px] lg:text-[20px] xl:text-[20px] text-[#1A2A40]">
             {t("paragraph1")}
           </p>
         </div>
       </FadeInSection>
       <div className="w-[80%] mx-auto py-4 xl:mt-8">
         <FadeInSection delay={0.2}>
-          <h1 className="text-[20px] xl:text-[24px] font-bold">
+          <h1 className="text-[20px] lg:text-[22px] xl:text-[24px] font-bold">
             {t("ourStoryTitle")}
           </h1>
         </FadeInSection>
         <FadeInSection delay={0.2}>
-          <p className="text-[16px] xl:text-[20px] md:text-[16px] text-[#1A2A40] xl:mt-8">
+          <p className="text-[16px] lg:text-[20px] xl:text-[20px] md:text-[16px] text-[#1A2A40] xl:mt-8">
             {t("paragraphDes")}
           </p>
         </FadeInSection>
@@ -95,10 +95,10 @@ export default function HomePage({ params }) {
               height={75}
             />
             <div>
-              <h4 className="text-[16px] xl:text-[20px] md:text-[16px] font-bold text-[#1A2A40]">
+              <h4 className="text-[16px] lg:text-[20px] xl:text-[20px] md:text-[16px] font-bold text-[#1A2A40]">
                 {t("NoPreservatives")}
               </h4>
-              <p className="text-[16px] md:text-[16px] xl:text-[20px] text-[#1A2A40]">
+              <p className="text-[16px] md:text-[16px] lg:text-[20px] xl:text-[20px] text-[#1A2A40]">
                 {t("NoPreservativesDes")}
               </p>
             </div>
@@ -108,10 +108,10 @@ export default function HomePage({ params }) {
           <div className="flex gap-2 xl:mt-8">
             <Image src={alcohol} alt="alcohol" width={50} height={75} />
             <div>
-              <h4 className="text-[16px] md:text-[16px] xl:text-[20px] font-bold text-[#1A2A40]">
+              <h4 className="text-[16px] md:text-[16px] lg:text-[20px] xl:text-[20px] font-bold text-[#1A2A40]">
                 {t("NoAlcohol")}
               </h4>
-              <p className="text-[16px] md:text-[16px] xl:text-[20px] text-[#1A2A40]">
+              <p className="text-[16px] md:text-[16px] lg:text-[20px] xl:text-[20px] text-[#1A2A40]">
                 {t("NoAlcoholDes")}
               </p>
             </div>
@@ -121,10 +121,10 @@ export default function HomePage({ params }) {
           <div className="flex gap-2 xl:mt-8">
             <Image src={droplet} alt="droplet" width={50} height={75} />
             <div>
-              <h4 className="text-[16px] md:text-[16px] xl:text-[20px] font-bold text-[#1A2A40]">
+              <h4 className="text-[16px] md:text-[16px] lg:text-[20px] xl:text-[20px] font-bold text-[#1A2A40]">
                 {t("NoMoreTears")}
               </h4>
-              <p className="text-[16px] md:text-[16px] xl:text-[20px] text-[#1A2A40]">
+              <p className="text-[16px] md:text-[16px] lg:text-[20px] xl:text-[20px] text-[#1A2A40]">
                 {t("NoMoreTearsDes")}
               </p>
             </div>
@@ -133,7 +133,7 @@ export default function HomePage({ params }) {
         <FadeInSection delay={0.2}>
           <Link
             href={"/ourStory"}
-            className="flex items-center gap-2 text-[#1A2A40] text-[16px] md:text-[16px] xl:text-[20px] font-bold xl:mt-8"
+            className="flex items-center gap-2 text-[#1A2A40] text-[16px] md:text-[16px] lg:text-[22px] xl:text-[20px] font-bold xl:mt-8 underline  w-1/5"
           >
             OUR STORY
             <Image src={arrow} alt="arrow" width={22} height={26} />
@@ -141,18 +141,17 @@ export default function HomePage({ params }) {
         </FadeInSection>
       </div>
 
-      <Review title={t("ourReviews")} />
       <FadeInSection delay={0.2}>
-        <div>
-          <div className="absolute top-[1450px] right-[-24%] rotate-[-23deg] md:top-[1520px] md:right-[-12%] xl:right-[-32%] xl:rotate-[-52deg] xl:top-[2000px]   z-[-1]">
+        <div className="relative flex justify-center items-center mt-8 w-screen">
+          <div className="absolute top-[-140px] right-[-24%] rotate-[-23deg] md:top-[-200px] md:right-[-12%] lg:top-[-210px] lg:right-[-80px] xl:right-[12%] xl:rotate-[-52deg] xl:top-[-400px]   z-[-1]">
             <Image
               src={cartoonDog}
               alt="dog"
-              className="w-[260px] md:w-[360px] xl:w-[740px] drop-shadow-xl "
+              className="w-[260px] md:w-[360px] xl:w-[540px] drop-shadow-xl "
               style={{ height: "auto" }}
             />
           </div>
-          <div className=" absolute top-[1500px] left-[-25%] rotate-[23deg] md:top-[1650px] md:left-[-14%]  xl:left-[-35%] xl:rotate-[42deg] xl:top-[2200px]  z-[-1]">
+          <div className=" absolute top-[-100px] left-[-25%] rotate-[23deg] md:top-[-150px] md:left-[-10%] lg:top-[-110px] lg:left-[-80px]  xl:left-[-8%] xl:rotate-[42deg] xl:top-[-400px]  z-[-1]">
             <Image
               src={cartoonCat}
               alt="Cat"
@@ -162,6 +161,7 @@ export default function HomePage({ params }) {
           </div>
         </div>
       </FadeInSection>
+      <Review title={t("ourReviews")} />
     </div>
   );
 }
