@@ -133,7 +133,7 @@ export default function HomePage({ params }) {
         <FadeInSection delay={0.2}>
           <Link
             href={"/ourStory"}
-            className="flex items-center gap-2 text-[#1A2A40] text-[16px] md:text-[16px] lg:text-[22px] xl:text-[20px] font-bold xl:mt-8 underline  w-1/5"
+            className="flex items-center gap-2 text-[#1A2A40] text-[16px] md:text-[16px] lg:text-[22px] xl:text-[20px] font-bold xl:mt-8 underline  md:w-1/5"
           >
             OUR STORY
             <Image src={arrow} alt="arrow" width={22} height={26} />
